@@ -1,0 +1,165 @@
+/* Container styles */
+.registration-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 3rem;
+    background-color: #f0f4f8;
+  }
+  
+  .registration-content {
+    display: flex;
+    flex-direction: row;
+    width: 80%;
+    max-width: 1000px;
+    background: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    gap: 2rem;
+  }
+  
+  .image-section {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #eef3f9;
+    padding: 2rem;
+  }
+  
+  .registration-image {
+    width: 100%;
+    max-width: 300px;
+    transform: scaleX(-1);
+  }
+  
+  .form-section {
+    flex: 1;
+    padding: 2.5rem;
+  }
+  
+  .form-section h2 {
+    font-size: 2rem;
+    font-weight: 700;
+    color: #333;
+  }
+  
+  .form-section p {
+    font-size: 1rem;
+    color: #666;
+    margin-bottom: 2rem;
+  }
+  
+  /* Form Styles */
+  .form-group {
+    margin-bottom: 1.5rem;
+  }
+  
+  .form-group label {
+    font-weight: 600;
+    color: #333;
+  }
+  
+  .form-input {
+    width: 100%;
+    padding: 0.75rem;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+    transition: border-color 0.3s;
+  }
+  
+  .form-input:focus {
+    outline: none;
+    border-color: #007bff;
+  }
+  
+  .is-invalid {
+    border-color: #ff4d4d;
+  }
+  
+  .error-text {
+    color: #ff4d4d;
+    font-size: 0.875rem;
+  }
+  
+  /* Button Styles */
+  .submit-button {
+    width: 100%;
+    padding: 0.75rem;
+    background-color: #1434CB;;
+    color: #fff;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    font-weight: 600;
+    font-size: 1rem;
+    transition: background-color 0.3s;
+  }
+  
+  .submit-button:hover {
+    background-color: #0056b3;
+  }
+  
+  /* Animations */
+  .registration-container,
+  .registration-content,
+  .form-section,
+  .image-section {
+    animation: fadeIn 1s ease-in-out;
+  }
+  
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  /* Responsive Styles */
+  @media (max-width: 768px) {
+    .registration-content {
+      flex-direction: column;
+      width: 90%;
+    }
+  
+    .image-section {
+      padding: 1.5rem;
+    }
+  
+    .form-section {
+      padding: 1.5rem;
+    }
+  
+    .form-section h2 {
+      font-size: 1.75rem;
+    }
+  
+    .form-section p {
+      font-size: 0.9rem;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .registration-container {
+      padding: 1.5rem;
+    }
+  
+    .form-section h2 {
+      font-size: 1.5rem;
+    }
+  
+    .form-section p {
+      font-size: 0.85rem;
+    }
+  
+    .submit-button {
+      padding: 0.5rem;
+      font-size: 0.9rem;
+    }
+  }
+  

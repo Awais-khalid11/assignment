@@ -1,0 +1,103 @@
+/* General navbar styling */
+.navbar {
+  padding: 10px 20px;
+}
+
+/* Logo container styling */
+.logo-container {
+  margin-right: auto; /* Align the logo to the left */
+  margin-left: 170px; /* Adjust margin to align with Hero section */
+  animation: fadeIn 1s ease;
+}
+
+/* Logo image styling */
+.logo-img {
+  width: 78px;
+  height: 48px;
+}
+
+/* Animation for logo */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateX(-20px); }
+  to { opacity: 1; transform: translateX(0); }
+}
+
+/* Navbar link styling */
+.navbar-nav .nav-link {
+  font-size: 16px;
+  color: #000;
+  margin: 0 10px;
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.navbar-nav .nav-link:hover {
+  color: #0056b3;
+  transform: translateY(-2px); /* Link hover animation */
+}
+
+.animated-link {
+  opacity: 0;
+  animation: fadeInUp 0.8s ease forwards;
+}
+
+.navbar-nav .nav-link:nth-child(1) { animation-delay: 0.2s; }
+.navbar-nav .nav-link:nth-child(2) { animation-delay: 0.4s; }
+.navbar-nav .nav-link:nth-child(3) { animation-delay: 0.6s; }
+
+/* Fade in and slide up animation for links */
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Contact Us button styling */
+.contact-btn {
+  font-size: 16px;
+  padding: 5px 20px;
+  margin-left: 15px;
+  border-radius: 2px;
+  animation: buttonPulse 1.5s ease infinite; /* Button pulse animation */
+  transition: transform 0.3s ease;
+}
+
+.contact-btn:hover {
+  transform: scale(1.05); /* Slightly scale up on hover */
+}
+
+/* Button pulse animation */
+@keyframes buttonPulse {
+  0%, 100% { box-shadow: 0 0 5px rgba(0, 123, 255, 0.4); }
+  50% { box-shadow: 0 0 15px rgba(0, 123, 255, 0.6); }
+}
+
+/* Responsive adjustments */
+@media (max-width: 992px) {
+  .navbar-nav {
+    text-align: center;
+  }
+
+  .contact-btn {
+    width: 100%;
+    margin: 10px 0;
+  }
+}
+
+@media (max-width: 576px) {
+  .navbar {
+    padding: 10px;
+  }
+
+  .logo-container {
+    margin-left: 0;
+  }
+
+  .logo-img {
+    width: 60px;
+    height: auto;
+  }
+
+  .navbar-nav .nav-link {
+    font-size: 14px;
+    margin: 5px 0;
+  }
+}
